@@ -9,13 +9,13 @@ import Navbar from "./navigation/Navbar";
 function App() {
   return (
     <div className="app-container">
-      {/* <StandardUser> */}
-      <Navbar />
-      {/* </StandardUser> */}
+      <StandardUser>
+        <Navbar />
+      </StandardUser>
       <Route path="/" component={LoginContainer} />
-      {/* <StandardUser withRedirect> */}
-      <Route component={DefaultContainer} />
-      {/* </StandardUser> */}
+      <StandardUser withRedirect>
+        <Route component={DefaultContainer} />
+      </StandardUser>
     </div>
   );
 }

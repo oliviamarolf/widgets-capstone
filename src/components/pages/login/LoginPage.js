@@ -31,7 +31,7 @@ export default function LoginPage() {
         if (data.message === "Logged In") {
           setUser(data.user);
           setAuthIsLoading(false);
-          history.push("/dashboard");
+          history.push("/about");
         }
       })
       .catch((err) => {
@@ -42,35 +42,37 @@ export default function LoginPage() {
   }
 
   return (
-    <div>
-      <h1>Login</h1>
+    <div className="login-container">
+      <div className="login-card">
+        <h1>LOGIN</h1>
 
-      <form onSubmit={handleSubmit}>
-        <div>
-          <input
-            type="email"
-            placeholder="email"
-            required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
+        <form onSubmit={handleSubmit}>
+          <div>
+            <input
+              type="email"
+              placeholder="email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
 
-        <div>
-          <input
-            type="password"
-            placeholder="password"
-            required
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
+          <div>
+            <input
+              type="password"
+              placeholder="password"
+              required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
 
-        <div>
-          <input type="submit" required />
-        </div>
-        {errorMsg}
-      </form>
+          <div>
+            <input type="submit" required value="login" />
+          </div>
+          {errorMsg}
+        </form>
+      </div>
     </div>
   );
 }
