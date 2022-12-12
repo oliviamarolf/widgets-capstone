@@ -1,0 +1,14 @@
+@import "navbar.scss";
+@import "widgetDashboard.scss";
+@import "counter.scss";
+@import "rgbSlider.scss";
+@import "swapi.scss";
+
+html,
+body,
+#root {
+  margin: 0;
+  height: 100vh;
+  background-color: #121212;
+  font-family: barlow;
+}

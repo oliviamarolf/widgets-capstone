@@ -8,55 +8,49 @@ export default function RGBSlider() {
   const [blue, setBlue] = useState(0);
 
   let styles = {
-    marginLeft: "40%",
-    height: 100,
+    height: 80,
     width: 200,
     background: "rgb(" + red + "," + green + "," + blue + ")",
   };
 
-  function updateRed(e) {
-    setRed(e.target.value);
-  }
-
-  function updateGreen(e) {
-    setGreen(e.target.value);
-  }
-
-  function updateBlue(e) {
-    setBlue(e.target.value);
-  }
+  let labelStyle = {
+    color: "rgb(" + red + "," + green + "," + blue + ")",
+    fontSize: 20,
+  };
 
   return (
-    <div>
-      <div style={styles}></div>
-      <input
-        id="red"
-        min="0"
-        max="255"
-        type="range"
-        value={red}
-        onChange={updateRed}
-      />
-      <input
-        id="green"
-        min="0"
-        max="255"
-        type="range"
-        value={green}
-        onChange={updateGreen}
-      />
-      <input
-        id="blue"
-        min="0"
-        max="255"
-        type="range"
-        value={blue}
-        onChange={updateBlue}
-      />
-      <div>
-        <label>
-          rgb({red},{green},{blue})
-        </label>
+    <div className="rgb-card">
+      <div className="rgb-container">
+        <div style={styles} className="rgb-box"></div>
+
+        <div className="sliders">
+          <input
+            min="0"
+            max="255"
+            type="range"
+            value={red}
+            onChange={(e) => setRed(e.target.value)}
+          />
+          <input
+            min="0"
+            max="255"
+            type="range"
+            value={green}
+            onChange={(e) => setGreen(e.target.value)}
+          />
+          <input
+            min="0"
+            max="255"
+            type="range"
+            value={blue}
+            onChange={(e) => setBlue(e.target.value)}
+          />
+        </div>
+        <div>
+          <label style={labelStyle}>
+            rgb ({red}, {green}, {blue})
+          </label>
+        </div>
       </div>
     </div>
   );

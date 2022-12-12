@@ -1,0 +1,51 @@
+.widget-dashboard {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .widget-container {
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 6% 0;
+
+    .widget-card {
+      background-color: #1d1d1d;
+      border-radius: 10px;
+      width: 90%;
+      height: 180px;
+      display: grid;
+      grid-template-rows: 0.5fr 1fr;
+      text-align: center;
+
+      .description {
+        margin: 0 14px;
+      }
+
+      h1 {
+        margin: 0;
+        color: #dcdcdc;
+        font-size: 24px;
+      }
+
+      p {
+        color: #dcdcdc;
+        font-size: 12px;
+      }
+
+      .arrow {
+        color: #5865f2;
+        width: 30px;
+        height: 30px;
+        float: right;
+        margin: 14px 14px;
+      }
+
+      .arrow:hover {
+        transition: 0.4s;
+        transform: rotate(360deg);
+      }
+    }
+  }
+}

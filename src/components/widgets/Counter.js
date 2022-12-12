@@ -12,10 +12,14 @@ export default function Counter() {
   };
 
   return (
-    <div>
-      <h1>{count}</h1>
-      <button onClick={increment}>+</button>
-      <button onClick={count > 0 ? decrement : null}>-</button>
+    <div className="count-card">
+      <div className="count-container">
+        <h1>{count}</h1>
+        <div className="buttons">
+          <button onClick={increment}>+</button>
+          <button onClick={count > 0 ? decrement : null}>-</button>
+        </div>
+      </div>
     </div>
   );
 }

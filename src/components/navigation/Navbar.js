@@ -1,22 +1,18 @@
 import { NavLink } from "react-router-dom";
 
-export default function NavBar() {
+export default function Navbar() {
   return (
     <div className="navbar-container">
-      <div className="about">
-        <NavLink to="/about">About</NavLink>
-      </div>
-
-      <div className="home">
-        <NavLink to="/home">Home</NavLink>
-      </div>
-
-      <div className="widgets">
-        <NavLink to="/widgets">Widgets</NavLink>
-      </div>
-
       <div className="logout">
-        <NavLink to="/logout">Logout</NavLink>
+        <NavLink to="/logout" className="logout">
+          LOGOUT
+        </NavLink>
+      </div>
+      <div className="widgets">
+        <NavLink to="/widgets">WIDGETS</NavLink>
+      </div>
+      <div className="about">
+        <NavLink to="/about">ABOUT</NavLink>
       </div>
     </div>
   );
