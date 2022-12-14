@@ -36,7 +36,6 @@ export default function Weather() {
             <button type="submit">Submit</button>
           </form>
         </div>
-        {/* {!data ? ( */}
         <div className="weather-data">
           <div>
             <h1>sunrise:</h1>
@@ -63,7 +62,6 @@ export default function Weather() {
             <p>{data.moon_phase}</p>
           </div>
         </div>
-        {/* ) : null} */}
       </div>
     </div>
   );
