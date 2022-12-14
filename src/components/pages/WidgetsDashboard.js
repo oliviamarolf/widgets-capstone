@@ -45,6 +45,15 @@ export default function WidgetsDashboard() {
             <p>View astrological information about the sun and moon.</p>
           </div>
         </div>
+        <div className="widget-card">
+          <Link to="/widget/joke">
+            <FontAwesomeIcon icon={faCircleChevronRight} className="arrow" />
+          </Link>
+          <div className="description">
+            <h1>Jokes</h1>
+            <p>Get a random programming themed joke.</p>
+          </div>
+        </div>
       </div>
     </div>
   );

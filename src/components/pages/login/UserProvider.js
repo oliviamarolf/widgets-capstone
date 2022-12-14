@@ -42,7 +42,7 @@ export default function UserProvider({ children }) {
       .then((data) => {
         if (data.user?.role) {
           setUser(data.user);
-          history.push("/dashboard");
+          history.push("/about");
         } else {
           setUser(null);
         }

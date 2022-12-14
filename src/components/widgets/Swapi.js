@@ -43,7 +43,10 @@ export default function Swapi() {
       <div className="swapi-container">
         <div>
           <h1>Choose a starship</h1>
-          <select onChange={(e) => setShipId(e.target.value)}>{options}</select>
+          <select onChange={(e) => setShipId(e.target.value)}>
+            <option>- select -</option>
+            {options}
+          </select>
         </div>
         <div className="swapi-results">
           <div>

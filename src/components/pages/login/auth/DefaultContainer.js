@@ -7,6 +7,7 @@ import Counter from "../../../widgets/Counter";
 import RGBSlider from "../../../widgets/RGBSlider";
 import Swapi from "../../../widgets/Swapi";
 import Weather from "../../../widgets/Weather";
+import Joke from "../../../widgets/Joke";
 
 function DefaultContainer() {
   return (
@@ -18,6 +19,7 @@ function DefaultContainer() {
       <Route path="/widget/rgb" component={RGBSlider} />
       <Route path="/widget/swapi" component={Swapi} />
       <Route path="/widget/weather" component={Weather} />
+      <Route path="/widget/joke" component={Joke} />
     </Switch>
   );
 }
