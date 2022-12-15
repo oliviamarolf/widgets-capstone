@@ -1,20 +1,17 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 export default function Weather() {
   const [data, setData] = useState({});
-  const zipRef = useRef(null);
-  const dateRef = useRef(null);
 
   function handleSubmit(e) {
     e.preventDefault();
 
     fetch(
-      `http://api.weatherapi.com/v1/astronomy.json?key=add29ccb8e5a4fac86214649221212&q=${zipRef.current.value}&dt=${dateRef.current.value}`
+      `http://api.weatherapi.com/v1/astronomy.json?key=${process.env.REACT_APP_WEATHER_KEY}&q=${e.target.zip.value}&dt=${e.target.date.value}`
     )
       .then((res) => res.json())
       .then((data) => {
         setData(data.astronomy.astro);
-        console.log(data);
       })
       .catch((err) => {
         console.error("Get data error: ", err);
@@ -26,13 +23,8 @@ export default function Weather() {
       <div className="weather-card">
         <div className="weather-form">
           <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-              name="zip"
-              ref={zipRef}
-              placeholder="enter zipcode"
-            />
-            <input type="date" name="date" ref={dateRef} />
+            <input type="text" name="zip" placeholder="enter zipcode" />
+            <input type="date" name="date" />
             <button type="submit">Submit</button>
           </form>
         </div>
